@@ -1,1 +1,12 @@
-Hello {{ name }}!
+{% extends 'FootballBundle::base.html.twig' %}
+
+{% block body %}
+    <ul>
+    {% for key, country in countries %}
+        <li>
+            <a href="{{ path('country', {'name': key}) }}"><img src="{{ asset(country.img) }}"/></a>
+            <a href="{{ path('team', {'name': key}) }}">{{ country.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

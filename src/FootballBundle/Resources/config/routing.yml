@@ -1,0 +1,19 @@
+index:
+    path:      /
+    defaults:  { _controller: FootballBundle:Default:index }
+
+country:
+    path:      country/{name}
+    defaults:  { _controller: FootballBundle:Default:country }
+    requirements:
+        name:  en|fr
+
+player:
+    path:      player/{name}
+    defaults:  { _controller: FootballBundle:Default:player }
+
+team:
+    path:      team/{name}
+    defaults:  { _controller: FootballBundle:Default:team }
+    requirements:
+        name:  en|fr
