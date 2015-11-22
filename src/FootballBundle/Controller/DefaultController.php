@@ -23,6 +23,7 @@ class DefaultController extends Controller
        private $teamsData = [
         'en' => [
             'name' => 'Team England',
+            'code' => 'en',
             'players' => [
                 [
                     'name' => 'Vasia Petrov'
@@ -32,10 +33,12 @@ class DefaultController extends Controller
                 ],
             ],
             'coach' =>  [
-                'name' => 'Vasia Petrov'
+                'name' => 'Vasia Petrov',
+                'text' => 'kasjdkjaskdjkasjdk',
             ],
         ],
         'fr' => [
+            'code' => 'fr',
             'player' => 'England',
             'coach' => 'gfhfgffg',
         ]
@@ -61,16 +64,26 @@ class DefaultController extends Controller
     }
 
     /**
-     * @param $name
+     * @param $country
+     * @param $id
      * @return Response
      */
-     public function playerAction($name)
+     public function playerAction($country, $id)
     {
-        return new Response($name);
+        return $this->render('FootballBundle:Default:player.html.twig', $this->teamsData[$country]['players'][$id]);
     }
 
     public function teamAction($name)
     {
         return $this->render('FootballBundle:Default:team.html.twig', $this->teamsData[$name]);
+    }
+
+    /**
+     * @param $country
+     * @return Response
+     */
+    public function coachAction($country)
+    {
+        return $this->render('FootballBundle:Default:coach.html.twig', $this->teamsData[$country]);
     }
 }

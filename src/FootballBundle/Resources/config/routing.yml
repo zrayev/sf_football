@@ -9,8 +9,12 @@ country:
         name:  en|fr
 
 player:
-    path:      player/{name}
+    path:      player/{country}/{id}
     defaults:  { _controller: FootballBundle:Default:player }
+
+coach:
+    path:      coach/{country}
+    defaults:  { _controller: FootballBundle:Default:coach }
 
 team:
     path:      team/{name}
