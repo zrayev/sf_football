@@ -25,10 +25,10 @@ class DefaultController extends Controller
             'name' => 'Team England',
             'code' => 'en',
             'players' => [
-                [
+                1 => [
                     'name' => 'Vasia Petrov'
                 ],
-                [
+                2 => [
                     'name' => 'Petro Pavlov'
                 ],
             ],
@@ -72,6 +72,10 @@ class DefaultController extends Controller
      */
      public function playerAction($country, $id)
     {
+        if (!isset($this->teamsData[$country]['players'][$id])) {
+            throw $this->createNotFoundException('The player does not exist');
+        }
+
         return $this->render('FootballBundle:Default:player.html.twig',[
             'player' => $this->teamsData[$country]['players'][$id],
         ]);

@@ -11,10 +11,15 @@ country:
 player:
     path:      player/{country}/{id}
     defaults:  { _controller: FootballBundle:Default:player }
+    requirements:
+        country:  en|fr
+        id:  \d+
 
 coach:
     path:      coach/{country}
     defaults:  { _controller: FootballBundle:Default:coach }
+    requirements:
+        country: en|fr
 
 team:
     path:      team/{name}
