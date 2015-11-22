@@ -10,4 +10,11 @@
         </ul>
     </div>
     <div>Coach: <a href="{{ path('coach', {'country': team.code}) }}"> {{ team.coach.name }}</a></div>
+    <div>
+        <ul>
+        {% for game in team.games %}
+            <li>{{ game.name }}: {{ game.score }}</li>
+        {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

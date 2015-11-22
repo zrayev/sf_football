@@ -6,23 +6,23 @@ country:
     path:      country/{name}
     defaults:  { _controller: FootballBundle:Default:country }
     requirements:
-        name:  en|fr
+        name:  en|fr|al|at|be|hr|cs|de|hu|is|ie|it|ie1|pl|pt|ro|ru|sk|es|se|ch|tr|ua|wales
 
 player:
     path:      player/{country}/{id}
     defaults:  { _controller: FootballBundle:Default:player }
     requirements:
-        country:  en|fr
+        country:  en|fr|al|at|be|hr|cs|de|hu|is|ie|it|ie1|pl|pt|ro|ru|sk|es|se|ch|tr|ua|wales
         id:  \d+
 
 coach:
     path:      coach/{country}
     defaults:  { _controller: FootballBundle:Default:coach }
     requirements:
-        country: en|fr
+        country: en|fr|al|at|be|hr|cs|de|hu|is|ie|it|ie1|pl|pt|ro|ru|sk|es|se|ch|tr|ua|wales
 
 team:
     path:      team/{name}
     defaults:  { _controller: FootballBundle:Default:team }
     requirements:
-        name:  en|fr
+        name:  en|fr|al|at|be|hr|cs|de|hu|is|ie|it|ie1|pl|pt|ro|ru|sk|es|se|ch|tr|ua|wales
