@@ -138,10 +138,12 @@ class DefaultController extends Controller
             'code' => 'en',
             'players' => [
                 1 => [
-                    'name' => 'Vasia Petrov'
+                    'name' => 'Vasia Petrov',
+                    'text' => 'Best player team England'
                 ],
                 2 => [
-                    'name' => 'Petro Pavlov'
+                    'name' => 'Petro Pavlov',
+                    'text' => 'Best player team England'
                 ],
             ],
             'games' => [
@@ -152,15 +154,11 @@ class DefaultController extends Controller
             ],
             'coach' =>  [
                 'name' => 'Vasia Petrov',
-                'text' => 'kasjdkjaskdjkasjdk',
+                'text' => 'Best coach team England',
             ],
         ],
+
         'fr' => [
-            'code' => 'fr',
-            'player' => 'France',
-            'coach' => 'gfhfgffg',
-        ],
-       'fr' => [
             'name' => 'Team France',
             'code' => 'fr',
             'players' => [
@@ -179,14 +177,11 @@ class DefaultController extends Controller
             ],
             'coach' =>  [
                 'name' => 'Vasia Petrov',
-                'text' => 'kasjdkjaskdjkasjdk',
+                'text' => 'Best coach team France',
             ],
         ],
-        'fr' => [
-            'code' => 'fr',
-            'player' => 'England',
-            'coach' => 'gfhfgffg',
-        ]
+
+
     ];
 
     /**

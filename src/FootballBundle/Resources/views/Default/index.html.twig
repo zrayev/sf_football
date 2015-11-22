@@ -2,12 +2,11 @@
 
 {% block body %}
     <h1>EURO 2016</h1>
-    <ul>
+
     {% for key, country in countries %}
-        <li>
+        <div>
             <a href="{{ path('country', {'name': key}) }}"><img src="{{ asset(country.img) }}"/></a>
             <a href="{{ path('team', {'name': key}) }}">{{ country.name }}</a>
-        </li>
+        </div>
     {% endfor %}
-    </ul>
 {% endblock %}
