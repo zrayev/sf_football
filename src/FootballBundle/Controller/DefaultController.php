@@ -60,7 +60,9 @@ class DefaultController extends Controller
      */
     public function countryAction($name)
     {
-        return $this->render('FootballBundle:Default:country.html.twig', $this->countriesData[$name]);
+        return $this->render('FootballBundle:Default:country.html.twig', [
+            'country' => $this->countriesData[$name],
+        ]);
     }
 
     /**
@@ -70,12 +72,20 @@ class DefaultController extends Controller
      */
      public function playerAction($country, $id)
     {
-        return $this->render('FootballBundle:Default:player.html.twig', $this->teamsData[$country]['players'][$id]);
+        return $this->render('FootballBundle:Default:player.html.twig',[
+            'player' => $this->teamsData[$country]['players'][$id],
+        ]);
     }
 
+    /**
+     * @param $name
+     * @return Response
+     */
     public function teamAction($name)
     {
-        return $this->render('FootballBundle:Default:team.html.twig', $this->teamsData[$name]);
+        return $this->render('FootballBundle:Default:team.html.twig', [
+            'team' => $this->teamsData[$name],
+        ]);
     }
 
     /**
@@ -84,6 +94,8 @@ class DefaultController extends Controller
      */
     public function coachAction($country)
     {
-        return $this->render('FootballBundle:Default:coach.html.twig', $this->teamsData[$country]);
+        return $this->render('FootballBundle:Default:coach.html.twig', [
+           'team' => $this->teamsData[$country],
+        ]);
     }
 }
