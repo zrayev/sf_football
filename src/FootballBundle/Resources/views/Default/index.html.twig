@@ -1,7 +1,7 @@
 {% extends 'FootballBundle::base.html.twig' %}
 
 {% block body %}
-    <h1>EURO 2016</h1>
+    {{ parent() }}
 
     {% for key, country in countries %}
         <div>
