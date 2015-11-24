@@ -5,11 +5,13 @@
         <title>{% block title %}UERO 2016{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('bundles/football/css/style.css') }}"/>
     </head>
     <body>
         {% block body %}
             <h1>EURO 2016</h1>
         {% endblock %}
         {% block javascripts %}{% endblock %}
+        <p>{{ "now"|date(null, "Europe/Kiev") }}</p>
     </body>
 </html>

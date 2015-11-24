@@ -242,4 +242,5 @@ class DefaultController extends Controller
            'team' => $this->teamsData[$country],
         ]);
     }
+
 }
