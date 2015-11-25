@@ -1,6 +1,6 @@
 <?php
 
-namespace FootballBundle\Tests\Controller;
+namespace AppBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

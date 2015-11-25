@@ -1,10 +1,5 @@
-#football:
-#    resource: "@FootballBundle/Controller/"
-#    type:     annotation
-#    prefix:   /
-#
 #app:
 #    resource: "@AppBundle/Controller/"
 #    type:     annotation
 app:
-    resource: "@FootballBundle/Resources/config/routing.yml"
+    resource: "@AppBundle/Resources/config/routing.yml"
