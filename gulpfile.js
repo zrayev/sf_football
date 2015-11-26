@@ -15,9 +15,9 @@ gulp.task('less', function() {
 
 gulp.task('images', function () {
     return gulp.src([
-            'web-src/images/*'
+            'web-src/img/*'
         ])
-        .pipe(gulp.dest('web/bundles/app/images/'))
+        .pipe(gulp.dest('web/bundles/app/img/'))
 });
 
 gulp.task('fonts', function () {
