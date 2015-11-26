@@ -1,6 +1,6 @@
 {
   "name": "football.loc",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "[![Build Status](https://travis-ci.org/zrayev/sf_football.svg?branch=dev)](https://travis-ci.org/zrayev/sf_football)",
   "main": "index.js",
   "scripts": {
@@ -15,17 +15,13 @@
   "bugs": {
     "url": "https://github.com/zrayev/sf_football/issues"
   },
-  "devDependencies": {
-    "gulp": "~3.9.0",
-    "gulp-ruby-sass": "~2.0.6",
-    "gulp-bower": "0.0.11",
-    "gulp-notify": "~2.2.0",
-    "gulp-load-plugins": "~1.1.0"
-  },
-  {
-   "dependencies": {
-    "gulp-jshint": "*",
-    "gulp-concat": "*"
-  }
+  "dependencies": {
+    "bower": "^1.4.2",
+    "gulp": "^3.9.0",
+    "gulp-clean": "~0.3.1",
+    "gulp-concat": "~2.6.0",
+    "gulp-less": "~3.0.5",
+    "gulp-uglify": "~1.5.1",
+    "less": "~2.5.3"
   }
 }
