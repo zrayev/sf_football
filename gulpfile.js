@@ -20,11 +20,6 @@ gulp.task('images', function () {
         .pipe(gulp.dest('web/bundles/app/img/'))
 });
 
-gulp.task('fonts', function () {
-    return gulp.src(['bower_components/bootstrap/fonts/*'])
-        .pipe(gulp.dest('web/bundles/app/fonts/'))
-});
-
 gulp.task('lib-js', function() {
     return gulp.src([
             'bower_components/jquery/dist/jquery.js',
@@ -44,12 +39,12 @@ gulp.task('pages-js', function() {
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['web/bundles/app/css/*', 'web/bundles/app/js/*', 'web/bundles/app/images/*', 'web/bundles/app/fonts/*'])
+    return gulp.src(['web/bundles/app/css/*', 'web/bundles/app/js/*', 'web/bundles/app/images/*'])
         .pipe(clean());
 });
 
 gulp.task('default', ['clean'], function () {
-    var tasks = ['less', 'images', 'fonts', 'lib-js', 'pages-js'];
+    var tasks = ['less', 'images', 'lib-js', 'pages-js'];
     tasks.forEach(function (val) {
         gulp.start(val);
     });
