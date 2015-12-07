@@ -4,10 +4,6 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Model\Country;
-use AppBundle\Model\Coach;
-use AppBundle\Model\Team;
-use AppBundle\Model\Player;
 
 class DefaultController extends Controller
 {
@@ -204,7 +200,6 @@ class DefaultController extends Controller
      */
     public function countryAction($name)
     {
-        $country = new Country();
         return $this->render('AppBundle:Default:country.html.twig', [
             'country' => $this->countriesData[$name],
         ]);
@@ -217,7 +212,6 @@ class DefaultController extends Controller
      */
      public function playerAction($country, $id)
     {
-        $player = new Player();
         if (!isset($this->teamsData[$country]['players'][$id])) {
             throw $this->createNotFoundException('The player does not exist');
         }
@@ -233,7 +227,6 @@ class DefaultController extends Controller
      */
     public function teamAction($name)
     {
-        $team = new Team();
         return $this->render('AppBundle:Default:team.html.twig', [
             'team' => $this->teamsData[$name],
         ]);
@@ -245,7 +238,6 @@ class DefaultController extends Controller
      */
     public function coachAction($country)
     {
-        $coach = new Coach();
         return $this->render('AppBundle:Default:coach.html.twig', [
            'team' => $this->teamsData[$country],
         ]);
