@@ -8,3 +8,7 @@ before_script:
 
 script:
   - phpunit -c app
+  - app/console doctrine:schema:update --force
+
+services:
+  - mysql
